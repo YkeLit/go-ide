@@ -11,6 +11,7 @@ mkdir -p $HOME/go/{bin,pkg,src}
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-vim -c PlugInstall -c GoInstallBinaries -c q -c q
+vim -c PlugInstall -c q -c q
+vim -c GoInstallBinaries -c q -c q
 
 cd /root/.vim/plugged/YouCompleteMe &&python3 install.py --go-completer --force-sudo
