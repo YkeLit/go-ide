@@ -18,4 +18,4 @@ jobs:
         registries: |-
           registry.cn-chengdu.aliyuncs.com,yk-tools,${{ secrets.ALIYUN_ID }},${{ secrets.ALIYUN_KEY }}
           ghcr.io,ykelit,${{ github.repository_owner }},${{ github.token }}
-        docker_file: Dockerfile
+        docker_file: ./Dockerfile
