@@ -1,6 +1,8 @@
 #!/bin/env bash
 
-apt-get update && apt-get install wget curl git vim  build-essential cmake python3-dev bash-completion -y &>> /dev/null
+apt-get update && apt-get install wget curl git vim bash-completion -y &>> /dev/null && \
+	rm -rf /var/lib/apt/lists/* && \
+	apt autoremove -y && \
 
 wget https://dl.google.com/go/go1.20.3.linux-amd64.tar.gz &>> /dev/null &&\
 	tar xzvf go1.20.3.linux-amd64.tar.gz -C /usr/local/ >>/dev/null &&\
