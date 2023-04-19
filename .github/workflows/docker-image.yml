@@ -17,5 +17,5 @@ jobs:
       with:
         registries: |-
           registry.cn-chengdu.aliyuncs.com,yk-tools,${{ secrets.ALIYUN_ID }},${{ secrets.ALIYUN_KEY }}
-          ghcr.io,ykelit,${{ github.repository_owner }},${{ github.token }}
+          ghcr.io,ykelit,${{ github.repository_owner }},${{ secrets.HUB_KEY }}
         dockerfile: ./Dockerfile
