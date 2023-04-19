@@ -3,7 +3,10 @@ name: Release Docker image for the app
 on:
   pull_request:
   push:
-    branches: [ "main" ]
+    tags:
+      - "v*.*.*"
+  release:
+    types: [published]
 
 jobs:
   build-and-push-image:
