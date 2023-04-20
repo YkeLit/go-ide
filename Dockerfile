@@ -1,6 +1,7 @@
 FROM ubuntu:latest
 
 COPY ./vimrc-init /root/.vimrc
+COPY ./bashrc /root/.bashrc
 
 COPY ./install.sh /usr/local
 RUN chmod +x /usr/local/install.sh && /usr/local/install.sh && \
