@@ -21,5 +21,14 @@ COPY ./vimrc /root/.vimrc
 
 ENV GOPATH /root/go
 ENV PATH $GOPATH/bin:$PATH
+ENV TZ=Asia/Shanghai \
+    DEBIAN_FRONTEND=noninteractive
+
+RUN apt update \
+    && apt install -y tzdata \
+    && ln -fs /usr/share/zoneinfo/${TZ} /etc/localtime \
+    && echo ${TZ} > /etc/timezone \
+    && dpkg-reconfigure --frontend noninteractive tzdata \
+    && rm -rf /var/lib/apt/lists/*
 RUN chmod -R 1777 "$GOPATH"
 WORKDIR $GOPATH
