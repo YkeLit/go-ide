@@ -1,9 +1,12 @@
 #!/bin/env bash
 
-apt-get update && apt-get install wget curl git vim bash-completion -y &>> /dev/null && \
+apt-get update && apt-get install wget curl git vim bash-completion tzdata -y &>> /dev/null && \
+	apt-get autoremove -y && \
 	rm -rf /var/lib/apt/lists/* && \
-	apt autoremove -y && \
-
+	ln -fs /usr/share/zoneinfo/${TZ} /etc/localtime && \
+	echo ${TZ} > /etc/timezone && \
+	dpkg-reconfigure --frontend noninteractive tzdata
+	
 wget https://dl.google.com/go/go1.20.3.linux-amd64.tar.gz &>> /dev/null &&\
 	tar xzvf go1.20.3.linux-amd64.tar.gz -C /usr/local/ >>/dev/null &&\
 	rm -f go1.20.3.linux-amd64.tar.gz
