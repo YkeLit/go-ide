@@ -12,16 +12,16 @@ ENV PATH=/usr/local/go/bin:$PATH \
     PATH=$GOPATH/bin:$PATH \
     TZ=Asia/Shanghai \
     DEBIAN_FRONTEND=noninteractive
-RUN apt-get update && apt-get install -y build-essential cmake python3-dev tzdata&& \
-    rm -rf /var/lib/apt/lists/* && \
-    vim -c GoInstallBinaries -c q -c q && \
+RUN apt-get update && apt-get install -y build-essential cmake python3-dev tzdata &&\
+    rm -rf /var/lib/apt/lists/* &&\
+    vim -c GoInstallBinaries -c q -c q &&\
     cd /root/.vim/plugged/YouCompleteMe &&\
     ln -fs /usr/share/zoneinfo/${TZ} /etc/localtime &&\
     echo ${TZ} > /etc/timezone &&\
     dpkg-reconfigure --frontend noninteractive tzdata &&\
-    python3 install.py --go-completer --force-sudo && \
-    apt autoremove -y && \
-    apt purge -y build-essential cmake python3-dev && \
+    python3 install.py --go-completer --force-sudo &&\
+    apt autoremove -y &&\
+    apt purge -y build-essential cmake python3-dev &&\
     rm -rf /root/go/pkg/* /root/.cache/* &&\
     chmod -R 1777 "$GOPATH"
 
