@@ -9,7 +9,8 @@ ENV TZ=Asia/Shanghai \
     
 RUN chmod +x /usr/local/install.sh && /usr/local/install.sh &&\
     rm -fr /root/.vim/plugged/YouCompleteMe/.git &&\
-    find / -name .*git | xargs rm -rf
+    find / -name .*git | xargs rm -rf &&\
+    rm -f /usr/local/install.sh
 
 ENV PATH /usr/local/go/bin:$PATH
 
