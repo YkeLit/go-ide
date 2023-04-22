@@ -18,8 +18,8 @@ set cursorcolumn " 突出显示当前列
 set showmatch " 显示括号匹配
 
 " tab 缩进
-set tabstop=4 " 设置Tab长度为4空格
-set shiftwidth=4 " 设置自动缩进长度为4空格
+set tabstop=2 " 设置Tab长度为2空格
+set shiftwidth=2 " 设置自动缩进长度为2空格
 set autoindent " 继承前一行的缩进方式，适用于多行注释
 
 " 定义快捷键的前缀，即<Leader>
@@ -103,10 +103,6 @@ Plug 'rakr/vim-one'
 Plug 'fatih/vim-go', { 'tag': '*' }
 " go 中的代码追踪，输入 gd 就可以自动跳转
 Plug 'dgryski/vim-godef'
-
-" markdown 插件
-Plug 'iamcco/mathjax-support-for-mkdp'
-Plug 'iamcco/markdown-preview.vim'
 
 " 插件结束的位置，插件全部放在此行上面
 call plug#end()
@@ -240,10 +236,6 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 "==============================================================================
 "  其他插件配置
 "==============================================================================
-
-" markdwon 的快捷键
-map <silent> <F5> <Plug>MarkdownPreview
-map <silent> <F6> <Plug>StopMarkdownPreview
 
 " tab 标签页切换快捷键
 :nn <Leader>1 1gt
