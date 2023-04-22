@@ -58,7 +58,7 @@ Plug 'junegunn/vim-easy-align'
 " 用来提供一个导航目录的侧边栏
 Plug 'scrooloose/nerdtree'
 
-" 可以使 nerdtree Tab 标签的名称更友好些
+" 可以使 nerdtree 的 tab 更加友好些
 Plug 'jistr/vim-nerdtree-tabs'
 
 " 可以在导航目录中看到 git 版本信息
@@ -84,18 +84,17 @@ Plug 'Valloric/YouCompleteMe'
 " 可以在文档中显示 git 信息
 Plug 'airblade/vim-gitgutter'
 
-
 " 下面两个插件要配合使用，可以自动生成代码块
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
+" 可以在 vim 中使用 tab 补全
+Plug 'vim-scripts/SuperTab'
+
+" 可以在 vim 中自动完成
+Plug 'Shougo/neocomplete.vim'
+
 " 配色方案
-" colorscheme neodark
-Plug 'KeitaNakamura/neodark.vim'
-" colorscheme monokai
-Plug 'crusoexia/vim-monokai'
-" colorscheme github 
-Plug 'acarapetis/vim-colors-github'
 " colorscheme one 
 Plug 'rakr/vim-one'
 
@@ -106,7 +105,6 @@ Plug 'dgryski/vim-godef'
 
 " 插件结束的位置，插件全部放在此行上面
 call plug#end()
-
 
 "==============================================================================
 " 主题配色 
@@ -161,7 +159,6 @@ let NERDTreeShowBookmarks=2
 " 在终端启动vim时，共享NERDTree
 let g:nerdtree_tabs_open_on_console_startup=1
 
-
 "==============================================================================
 "  majutsushi/tagbar 插件
 "==============================================================================
@@ -197,7 +194,6 @@ let g:tagbar_type_go = {
     \ 'ctagsargs' : '-sort -silent'
 \ }
 
-
 "==============================================================================
 "  nerdtree-git-plugin 插件
 "==============================================================================
@@ -216,8 +212,6 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 
 let g:NERDTreeGitStatusShowIgnored = 1
 
-
-
 "==============================================================================
 "  Valloric/YouCompleteMe 插件
 "==============================================================================
@@ -231,7 +225,6 @@ let g:SuperTabDefaultCompletionType = '<C-n>'
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-
 
 "==============================================================================
 "  其他插件配置
