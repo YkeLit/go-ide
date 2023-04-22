@@ -93,12 +93,6 @@ Plug 'Shougo/neocomplete.vim'
 
 
 " 配色方案
-" colorscheme neodark
-Plug 'KeitaNakamura/neodark.vim'
-" colorscheme monokai
-Plug 'crusoexia/vim-monokai'
-" colorscheme github 
-Plug 'acarapetis/vim-colors-github'
 " colorscheme one 
 Plug 'rakr/vim-one'
 
@@ -106,10 +100,6 @@ Plug 'rakr/vim-one'
 Plug 'fatih/vim-go', { 'tag': '*' }
 " go 中的代码追踪，输入 gd 就可以自动跳转
 Plug 'dgryski/vim-godef'
-
-" markdown 插件
-Plug 'iamcco/mathjax-support-for-mkdp'
-Plug 'iamcco/markdown-preview.vim'
 
 " 插件结束的位置，插件全部放在此行上面
 call plug#end()
