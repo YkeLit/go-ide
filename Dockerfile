@@ -26,7 +26,7 @@ RUN apt-get update && apt-get install -y build-essential cmake python3-dev &&\
     find / -name .*git | xargs rm -rf
 
 ENV GOPATH /root/go
-ENV PATH $GOPATH/bin:$PATH
+ENV PATH /root/go/bin:$PATH
     
 COPY ./vimrc /root/.vimrc
 
