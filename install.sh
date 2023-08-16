@@ -7,9 +7,9 @@ apt-get update && apt-get install wget curl git vim bash-completion tzdata exube
 	echo ${TZ} > /etc/timezone && \
 	dpkg-reconfigure --frontend noninteractive tzdata
 	
-wget https://dl.google.com/go/go1.20.3.linux-amd64.tar.gz &>> /dev/null &&\
-	tar xzvf go1.20.3.linux-amd64.tar.gz -C /usr/local/ >>/dev/null &&\
-	rm -f go1.20.3.linux-amd64.tar.gz
+wget https://dl.google.com/go/go1.20.3.linux-arm64.tar.gz &>> /dev/null &&\
+	tar xzvf go1.20.3.linux-arm64.tar.gz -C /usr/local/ >>/dev/null &&\
+	rm -f go1.20.3.linux-arm64.tar.gz
 
 mkdir -p $HOME/go/{bin,pkg,src}
 
