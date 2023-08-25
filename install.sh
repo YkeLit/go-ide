@@ -1,7 +1,7 @@
 #!/bin/env bash
 
 ARCH=$(dpkg --print-architecture)
-VERSION=1.21.0
+VERSION=1.20.7
 
 apt-get update && apt-get install wget curl git vim bash-completion tzdata exuberant-ctags -y &>> /dev/null && \
 	apt-get autoremove -y && \
