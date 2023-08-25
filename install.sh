@@ -1,5 +1,8 @@
 #!/bin/env bash
 
+ARCH=$(dpkg --print-architecture)
+VERSION=1.21.0
+
 apt-get update && apt-get install wget curl git vim bash-completion tzdata exuberant-ctags -y &>> /dev/null && \
 	apt-get autoremove -y && \
 	rm -rf /var/lib/apt/lists/* && \
@@ -7,9 +10,9 @@ apt-get update && apt-get install wget curl git vim bash-completion tzdata exube
 	echo ${TZ} > /etc/timezone && \
 	dpkg-reconfigure --frontend noninteractive tzdata
 	
-wget https://dl.google.com/go/go1.21.0.linux-amd64.tar.gz &>> /dev/null &&\
-	tar xzvf go1.21.0.linux-amd64.tar.gz -C /usr/local/ >>/dev/null &&\
-	rm -f go1.21.0.linux-amd64.tar.gz
+wget https://dl.google.com/go/go$VERSION.linux-$ARCH.tar.gz &>> /dev/null &&\
+	tar xzvf go$VERSION.linux-$ARCH.tar.gz -C /usr/local/ >>/dev/null &&\
+	rm -f go$VERSION.linux-$ARCH.tar.gz
 
 mkdir -p $HOME/go/{bin,pkg,src}
 
