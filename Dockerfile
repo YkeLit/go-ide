@@ -31,4 +31,4 @@ ENV PATH /root/go/bin:$PATH
     
 COPY ./vimrc /root/.vimrc
 
-WORKDIR $GOPATH
+WORKDIR $GOPATH/src
